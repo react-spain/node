@@ -59,3 +59,43 @@ fs.writeFile('tabla-5.txt',salida, (err) => {
     console.log('Archivo creado')
 })
 ```
+
+
+# Escribiendo en un Fichero con export y uso de promesas
+```
+// multiplicar.js
+const fs = require('fs');
+const { resolve } = require('path');
+
+const crearArchivo = (base = 5) => {
+    return new Promise((resolve, reject) =>{
+    console.log('=================')
+    let salida = ''
+    for( let i=1; i<=10; i++ ){
+            salida += `${base} x ${i} = ${base*i}\n`;
+        }
+    console.log(salida);
+    fs.writeFileSync(`tabla-${base}.txt`,salida);
+    resolve(`tabla-${base}.txt creado`);
+    })
+}
+
+module.exports = {
+    crearArchivo
+}
+```
+```
+// app.js
+const { crearArchivo } = require('./helpers/multiplicar');
+
+console.clear();
+const base = 12;
+
+crearArchivo( base )
+    .then(nombreArchivo => console.log(nombreArchivo, 'creado'))
+    .catch(err=>console.log(err));
+
+```
+
+
+
