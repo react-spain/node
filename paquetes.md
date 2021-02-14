@@ -1,4 +1,4 @@
-# nodemon
+# nodemon app.js
 
 ```
 https://www.npmjs.com/package/nodemon
