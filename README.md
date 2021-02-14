@@ -41,3 +41,21 @@ for( let i=1; i<=10; i++ ){
         console.log(`${base} x ${i} = ${base*i}`);
     }
 ```
+
+# Escribiendo en un Fichero
+```
+const fs = require('fs');
+console.clear();
+const base = 5;
+let salida = ''
+for( let i=1; i<=10; i++ ){
+        salida += `${base} x ${i} = ${base*i}\n`;
+    }
+
+
+fs.writeFile('tabla-5.txt',salida, (err) => {
+    if (err) throw err;
+
+    console.log('Archivo creado')
+})
+```
