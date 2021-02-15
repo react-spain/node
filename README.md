@@ -18,7 +18,17 @@ npm init
 }
 ```
 
+# Instalar Paquetes
+```
+node -i colors@1.0.0
+node -install colors@1.0.0
+```
 
+# Desintalar Paquetes
+```
+node -i colors@1.0.0
+node -uninstall colors@1.0.0
+```
 
 # Hola Mundo
 ```
