@@ -1,4 +1,26 @@
 # Hola Mundo
+Creamos el package.json
+```
+npm init
+```
+
+```
+{
+  "name": "03-bases-node",
+  "version": "1.0.0",
+  "description": "Es una simple tabla de multiplicar",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marlon Falcon",
+  "license": "ISC"
+}
+```
+
+
+
+# Hola Mundo
 ```
 // Funcion Flecha
 const saludar = ( nombre ) => {
