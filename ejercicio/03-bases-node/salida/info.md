@@ -1,0 +1,2 @@
+# informacion
+esta carpeta contiene

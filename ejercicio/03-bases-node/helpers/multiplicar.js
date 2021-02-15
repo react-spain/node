@@ -17,7 +17,7 @@ const crearArchivo = (base = 5, listar) => {
         
     }
     
-    fs.writeFileSync(`tabla-${base}.txt`,salida);
+    fs.writeFileSync(`./salida/tabla-${base}.txt`,salida);
     resolve(`tabla-${base}.txt creado`);
     })
 }
